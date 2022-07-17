@@ -1,0 +1,53 @@
+<html>
+    <head>
+	<script type="text/javascript" data-main="./init.js" 
+			src="/jqwidgets/scripts/require.js">
+	</script>
+	<link rel="stylesheet" 
+		   href="/jqwidgets/styles/jqx.base.css" 
+		   type="text/css" />
+    </head>
+    <body  style="background-color: whitesmoke">
+	<!-- first-comp component is instatiated and passed 'params' !-->
+	<!-- 'params' is a mechanism to pass arguments/data to the component !-->
+	<h4 style="text-align: center;">
+		MVVM Javascript Implementation: KnockoutJS, 
+		jQuery, jQWidgets, requireJS Integration
+	</h4>
+	<table>
+		<tbody>
+		<tr>
+			<td>
+				<first-comp params="{enabled:false,name:'Component 1'}">
+				</first-comp>
+			</td>
+			<td>
+				<first-comp params="{enabled:true,name:'Component 2'}">
+				</first-comp>
+			</td>
+			<td>
+				<first-comp params="{enabled:true,name:'Component 3'}">
+				</first-comp>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<chart-comp params="{items:items,enabled:true,
+									 name:'chart_component1'}">
+				</chart-comp>
+			</td>
+			<td>
+				<chart-comp params="{items:items,enabled:true,
+									 name:'chart_component2'}">
+				</chart-comp>
+			</td>
+			<td>
+				<chart-comp params="{items:items,enabled:true,
+									 name:'chart_component3'}">
+				</chart-comp>
+			</td>
+			</tr>
+    	</tbody>
+    </table>
+    </body>
+</html>

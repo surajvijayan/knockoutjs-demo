@@ -1,0 +1,27 @@
+<span data-bind='text: name'></span>
+<input data-bind='click: addQuote,
+                  jqxButton: {template:"success",disabled: enabled}' 
+                  value='Add' 
+                  type='button'/>
+<input data-bind='click: delQuote,
+                  jqxButton: {template:"primary",disabled: enabled}' 
+                  value='Delete' 
+                  type='button'/>
+<input type='checkbox' data-bind='checked: enabled'>Hide?
+<!-- Entire table is being faded away wher enabled property is unset -->
+<div data-bind='fadeVisible: enabled() == 0'>
+	<table border="0">
+    <tbody data-bind="foreach: items">
+    <tr>
+        <td data-bind='text: quote'></td>
+        <!-- Note:Button is getting disabled when enabled property is unset -->
+        <td><button data-bind='click: $parent.delIt,
+                              jqxButton:{disabled: $parent.enabled},
+                              fadeVisible: $parent.enabled() == 0'>
+                              Delete
+            </button>
+		</td>
+    </tr>
+    </tbody>
+	</table>
+</div>

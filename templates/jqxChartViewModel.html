@@ -1,0 +1,27 @@
+<div data-bind='visible: enabled'>
+	<div id="chart" style="width: 250; height: 200px;" 
+         data-bind='jqxChart: chartSettings'>
+    </div>
+</div>
+<div style="margin-bottom: 10px;">
+	<input id="updateButton" type="button" 
+           data-bind="click: updateItem" 
+           value="Randomize Data" />
+</div>
+<table style="background-color: white" border = 1 cellpadding="5" cellspacing="5">
+    <tr style="background-color: rgba(71, 69, 69, 0.289); color: rgba(12, 1, 1, 0.922)">
+        <th>Day</th>
+        <th>Keith</th>
+        <th>Erica</th>
+        <th>George</th>
+	</tr>
+    <tbody data-bind="foreach: items">
+   		<tr>
+        	<td data-bind="text: Day"></td>
+        	<td data-bind="text: Keith"></td>
+        	<td data-bind="text: Erica"></td>
+        	<td data-bind="text: George"></td>
+    	</tr>
+    </tbody>
+</table>
+</div>
